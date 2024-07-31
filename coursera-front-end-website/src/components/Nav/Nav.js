@@ -1,49 +1,50 @@
 import React, { useState } from "react";
-import logo from "../../images/Logo .svg";
-import './Nav.css';
+import { Link } from "react-router-dom";
+import HeaderLogo from "../../images/Logo.svg";
+import navStyle from './Nav.module.css';
 
 const Nav = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
 
-  return (
-    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-      <a href="/" className="logo">
-        <img src={logo} alt="" />
-      </a>
-      <div className="menu-icon" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-      <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About</a>
-        </li>
-        <li>
-          <a href="/">Services</a>
-        </li>
-        <li>
-          <a href="/">Menu</a>
-        </li>
-        <li>
-          <a href="/">Reservations</a>
-        </li>
-        <li>
-          <a href="/booking">Order Online</a>
-        </li>
-        <li>
-          <a href="/">Login</a>
-        </li>
-      </ul>
-    </nav>
-  );
+    return (
+        <div className={navStyle.nav}>
+            <Link to="/booking-a-table-on-the-little-lemon-website-react">
+                <img src={HeaderLogo} alt="logo" className={navStyle.logo} />
+            </Link>
+
+            <button className={navStyle.menuToggle} onClick={toggleMobileMenu}>
+                ☰
+            </button>
+
+            <div className={`${navStyle.navList} ${isMobileMenuOpen ? navStyle.open : ''}`}>
+                <ul>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react/menu">Menu</Link>
+                    </li>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react/reservations">Reservations</Link>
+                    </li>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react/order-online">Order online</Link>
+                    </li>
+                    <li>
+                        <Link to="/booking-a-table-on-the-little-lemon-website-react/login">Login</Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
 };
 
 export default Nav;
+

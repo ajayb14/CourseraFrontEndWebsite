@@ -1,0 +1,54 @@
+.about {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partOne {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 40rem;
+    overflow-wrap: break-word;
+    text-align: justify;
+    margin-right: 4rem;
+}
+
+h1 {
+    color: #f4ce14;
+    font-size: 50px
+}
+
+h3 {
+    font-size: 35px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.partOne p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.partTwo {
+    width: 20rem;
+    height: 20rem;
+    object-fit: none;
+    position: relative;
+}
+
+.imageOne {
+    width: 80%;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.imageTwo {
+    width: 80%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
