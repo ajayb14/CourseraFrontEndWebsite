@@ -46,3 +46,68 @@ footer ul li a:hover {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  footer section {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 5%;
+  }
+
+  .company-info {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .company-info img {
+      width: 150px;
+  }
+
+  .company-info p {
+      width: auto;
+      margin-top: 10px;
+  }
+
+  footer h3 {
+      font-size: 16px;
+  }
+
+  footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+  }
+
+  footer ul li {
+      padding: 5px 0;
+  }
+
+  footer ul li a {
+      padding: 3px;
+  }
+
+  footer section > div {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .company-info {
+      margin-bottom: 40px;
+  }
+
+  footer > section > div > ul {
+      margin: 0;
+  }
+
+  footer > section > div > ul > li {
+      display: block;
+      margin: 5px 0;
+  }
+  
+  .important-links, .contact, .social-media {
+      margin-bottom: 20px;
+  }
+}
+
+

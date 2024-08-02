@@ -18,11 +18,18 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; 
+    padding: 0; 
 }
 
 .card ul li {
     width: 20rem;
     overflow-wrap: break-word;
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem; 
+    padding: 1rem; 
 }
 
 .card ul li .partOne {
@@ -32,7 +39,8 @@
 }
 
 .card ul li .rating {
-    width: 8%;
+    width: 15px;
+    margin: 0 1px; 
 }
 
 .partTwo {
@@ -56,3 +64,33 @@
     margin-top: 2rem;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .card ul {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0;
+    }
+
+    .card ul li {
+        width: 90%; 
+        margin: 0;
+        margin-bottom: 1rem;
+        border-radius: 10px; 
+        padding: 1rem; 
+    }
+
+    .card ul li .rating {
+        width: 15px; 
+    }
+
+    .partTwo .photo {
+        width: 80px; 
+    }
+
+    .partTwo .name {
+        font-size: 1rem; 
+    }
+}
+
+

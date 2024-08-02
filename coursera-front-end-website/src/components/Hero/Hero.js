@@ -14,7 +14,7 @@ const Hero = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Link to="/booking">
+          <Link to="/reservations">
             <button aria-label="On Click">Reserve Table</button>
           </Link>
         </div>

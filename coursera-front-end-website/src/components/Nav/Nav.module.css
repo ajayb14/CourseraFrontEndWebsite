@@ -1,13 +1,22 @@
-
 .nav {
   margin-top: 2rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  flex-direction: column; 
+}
+
+.logoLink {
+  margin-bottom: 1rem; 
 }
 
 .logo {
-  display: block;
-  margin: 0 auto;
-  width: 20%;
+  width: 200px;
 }
 
 .headerLogoLine {
@@ -21,6 +30,7 @@
 
 .navList {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .navList ul {
@@ -53,16 +63,18 @@
   background: none;
   border: none;
   font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   cursor: pointer;
+  position: relative;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
+  .nav {
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
   .logo {
-    width: 50%;
+    width: 150px;
   }
 
   .navList {
@@ -70,10 +82,10 @@
     width: 100%;
     background-color: #495E57;
     position: absolute;
-    top: 100%;
+    top: 100%; 
     left: 0;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .navList.open {
@@ -82,23 +94,33 @@
 
   .navList ul {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    padding: 0;
   }
 
   .navList ul li {
-    margin: 1rem 0;
+    margin: 0;
+    width: 100%;
   }
 
   .navList ul li a {
     font-size: 1.2rem;
-    color: #fff;
+    color: #000;
+    display: block;
+    width: 100%;
+    padding: 1rem;
   }
 
   .menuToggle {
     display: block;
   }
 }
+
+
+
+
+
 
 
   

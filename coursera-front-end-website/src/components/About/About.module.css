@@ -52,3 +52,34 @@ h3 {
     left: 0;
     bottom: 0;
 }
+@media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem; 
+    }
+  
+    .partOne {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 2rem; 
+    }
+  
+    .partTwo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imageOne,
+    .imageTwo {
+      width: 90%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  
+  

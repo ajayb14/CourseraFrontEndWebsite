@@ -12,7 +12,7 @@ const Nav = () => {
 
     return (
         <div className={navStyle.nav}>
-            <Link to="/booking-a-table-on-the-little-lemon-website-react">
+            <Link to="/" className={navStyle.logoLink}>
                 <img src={HeaderLogo} alt="logo" className={navStyle.logo} />
             </Link>
 
@@ -23,22 +23,22 @@ const Nav = () => {
             <div className={`${navStyle.navList} ${isMobileMenuOpen ? navStyle.open : ''}`}>
                 <ul>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react/about">About</Link>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react/menu">Menu</Link>
+                        <Link to="/menu">Menu</Link>
                     </li>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react/reservations">Reservations</Link>
+                        <Link to="/reservations">Reservations</Link>
                     </li>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react/order-online">Order online</Link>
+                        <Link to="/order-online">Order online</Link>
                     </li>
                     <li>
-                        <Link to="/booking-a-table-on-the-little-lemon-website-react/login">Login</Link>
+                        <Link to="/login">Login</Link>
                     </li>
                 </ul>
             </div>
@@ -47,4 +47,6 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
 
